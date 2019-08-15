@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {Button, Icon, Container} from 'semantic-ui-react';
 import ModalShortHand from './ModalShortHand';
 import ModalBasic from './ModalBasic';
+import ModalBasic2 from './ModalBasic2';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ const App = ({ children }) => (
     {children}
     <ModalShortHand/>
     <ModalBasic/>
+    <ModalBasic2/>
   </Container>
 );
 
