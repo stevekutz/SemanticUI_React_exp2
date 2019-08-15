@@ -1,5 +1,5 @@
 import React from 'react';
-import {cat_01} from './img/cat_01.jpg';
+import cat_01 from './img/cat_01.jpg';
 import {Button, Header, Image, Modal} from 'semantic-ui-react';
 
 const ModalBasic = () => (

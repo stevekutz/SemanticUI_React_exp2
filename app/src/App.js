@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Icon, Container} from 'semantic-ui-react';
 import ModalShortHand from './ModalShortHand';
+import ModalBasic from './ModalBasic';
 
 import './App.css';
 
@@ -19,17 +20,20 @@ const ButtonExampleBasicShorthand = () => (
   </div>
 )
 
-/*    This works
+   // This works
 const App = ({ children }) => (
   <Container style={{ margin: 20 }}>
    
 
     {children}
     <ModalShortHand/>
+    <ModalBasic/>
   </Container>
 );
-*/
-    // This works
+
+
+/*
+// This works
 class App extends Component {
   
   render() {
@@ -40,13 +44,17 @@ class App extends Component {
       <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid dodgerblue`}}>
         <ModalShortHand/>
       </Container>
-      
+      <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid deeppink`}}>
+        <ModalBasic/>
+      </Container>
+
+
       </Fragment>
     )
   }
 
 }
-
+*/
 
 
 export default App;
