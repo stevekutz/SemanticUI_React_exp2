@@ -26,6 +26,8 @@ class App extends Component {
         <div className="App">
           <ButtonExampleBasicShorthand /> 
         </div>
+        
+
       </Fragment>
     )
   }
