@@ -22,13 +22,52 @@ class ModalNested extends React.Component {
                 size = 'tiny'
                 trigger = {
                     <Button primary icon>
-                        Goto Next Modal <Icon name = 'mail forward'/>
+                        Goto the Next Modal <Icon name = 'mail forward'/>
                     </Button>
                 }
             >
                 <Modal.Header>Next Modal</Modal.Header>
                 <Modal.Content>
                     <p> Next Modal content here</p>
+                </Modal.Content>
+                <Modal.Actions>
+                    <ModalNested2/>
+                </Modal.Actions>
+            </Modal>
+        )
+    }
+}
+
+// <Button icon = 'pointing right' content = "That/'s All folks" onClick = {this.close} />
+
+class ModalNested2 extends React.Component {
+    state = {
+        open: false,
+
+    }
+
+    //handlers
+    open = () => this.setState({ open: true});
+    close = () => this.setState({open: false})
+
+    render() {
+        const {open} = this.state;
+
+        return (
+            <Modal
+                open = {open}
+                onOpen = {this.open}
+                onClose = {this.close}
+                size = 'tiny'
+                trigger = {
+                    <Button primary icon>
+                        Goto the Next2 Modal <Icon name = 'mail forward'/>
+                    </Button>
+                }
+            >
+                <Modal.Header>Next2 Modal</Modal.Header>
+                <Modal.Content>
+                    <p> Next2 Modal content here</p>
                 </Modal.Content>
                 <Modal.Actions>
                     <Button icon = 'hand victory' content = "That/'s All folks" onClick = {this.close} />
@@ -46,7 +85,7 @@ const MultiModal = () => (
           <Icon name='right arrow' />
         </div>
         <Modal.Description>
-          <p>Go to the next Modal</p>
+          <p>Go to the next Modal NOW</p>
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
