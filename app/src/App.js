@@ -4,6 +4,7 @@ import ModalShortHand from './ModalShortHand';
 import ModalBasic from './ModalBasic';
 import ModalBasic2 from './ModalBasic2';
 import ModalTopAligned from './ModalTopAligned';
+import MultiModal from './MultiModal';
 
 import './App.css';
 
@@ -60,7 +61,9 @@ class App extends Component {
       <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid seagreen`}}>
         <ModalTopAligned/>
       </Container>
-
+      <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid violet`}}>
+        <MultiModal/>
+      </Container>
 
       </Fragment>
     )
