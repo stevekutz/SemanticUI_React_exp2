@@ -19,7 +19,7 @@ class ModalNested extends React.Component {
                 open = {open}
                 onOpen = {this.open}
                 onClose = {this.close}
-                size = 'tiny'
+                size = 'large'
                 trigger = {
                     <Button primary icon>
                         Goto the Next Modal <Icon name = 'mail forward'/>
@@ -29,6 +29,7 @@ class ModalNested extends React.Component {
                 <Modal.Header>Next Modal</Modal.Header>
                 <Modal.Content>
                     <p> Next Modal content here</p>
+                    <p> Just something extra here </p>
                 </Modal.Content>
                 <Modal.Actions>
                     <ModalNested2/>
@@ -38,7 +39,7 @@ class ModalNested extends React.Component {
     }
 }
 
-// <Button icon = 'pointing right' content = "That/'s All folks" onClick = {this.close} />
+// avail sizes >> ["mini","tiny","small","large","fullscreen"]
 
 class ModalNested2 extends React.Component {
     state = {
@@ -61,13 +62,50 @@ class ModalNested2 extends React.Component {
                 size = 'tiny'
                 trigger = {
                     <Button primary icon>
-                        Goto the Next2 Modal <Icon name = 'mail forward'/>
+                        Goto the Next2 Last Modal <Icon name = 'mail forward'/>
                     </Button>
                 }
             >
-                <Modal.Header>Next2 Modal</Modal.Header>
+                <Modal.Header>Next2 Last Modal</Modal.Header>
                 <Modal.Content>
-                    <p> Next2 Modal content here</p>
+                    <p> Next2 Last Modal content here</p>
+                </Modal.Content>
+                <Modal.Actions>
+                    <ModalNestedLast/>
+                </Modal.Actions>
+            </Modal>
+        )
+    }
+}
+
+class ModalNestedLast extends React.Component {
+    state = {
+        open: false,
+
+    }
+
+    //handlers
+    open = () => this.setState({ open: true});
+    close = () => this.setState({open: false})
+
+    render() {
+        const {open} = this.state;
+
+        return (
+            <Modal
+                open = {open}
+                onOpen = {this.open}
+                onClose = {this.close}
+                size = 'mini'
+                trigger = {
+                    <Button primary icon>
+                        Goto the Last Modal <Icon name = 'triangle right'/>
+                    </Button>
+                }
+            >
+                <Modal.Header>Last Modal</Modal.Header>
+                <Modal.Content>
+                    <p> Last Modal content here</p>
                 </Modal.Content>
                 <Modal.Actions>
                     <Button icon = 'hand victory' content = "That/'s All folks" onClick = {this.close} />
