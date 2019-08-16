@@ -3,6 +3,7 @@ import {Button, Icon, Container} from 'semantic-ui-react';
 import ModalShortHand from './ModalShortHand';
 import ModalBasic from './ModalBasic';
 import ModalBasic2 from './ModalBasic2';
+import ModalTopAligned from './ModalTopAligned';
 
 import './App.css';
 
@@ -21,8 +22,10 @@ const ButtonExampleBasicShorthand = () => (
   </div>
 )
 
+/*
    // This works
 const App = ({ children }) => (
+  
   <Container style={{ margin: 20 }}>
    
 
@@ -30,15 +33,17 @@ const App = ({ children }) => (
     <ModalShortHand/>
     <ModalBasic/>
     <ModalBasic2/>
+    <ModalTopAligned/>
   </Container>
 );
+*/
 
 
-/*
 // This works
 class App extends Component {
   
   render() {
+   // console.log('this.props.children is >> ', this.props.children);
     return (
       <Fragment>
        
@@ -49,6 +54,12 @@ class App extends Component {
       <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid deeppink`}}>
         <ModalBasic/>
       </Container>
+      <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid seagreen`}}>
+        <ModalBasic2/>
+      </Container>
+      <Container style = {{margin: `20px`, padding: `10px`, border: `1px solid seagreen`}}>
+        <ModalTopAligned/>
+      </Container>
 
 
       </Fragment>
@@ -56,7 +67,7 @@ class App extends Component {
   }
 
 }
-*/
+
 
 
 export default App;
